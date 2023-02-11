@@ -1,0 +1,34 @@
+{
+  "name": "teslang-compiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/run.ts",
+  "scripts": {
+    "tes": "npx ts-node src/run.ts",
+    "cg": "nearleyc src/syntax-analyzer/tes-lang.grammar.ne -o src/syntax-analyzer/tes-lang.grammar.ts",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint"
+  },
+  "keywords": [],
+  "author": "younes_nb",
+  "license": "ISC",
+  "dependencies": {
+    "@types/moo": "^0.5.5",
+    "@types/nearley": "^2.11.2",
+    "@types/node": "^18.13.0",
+    "chalk": "^4.1.2",
+    "gts": "^3.1.1",
+    "moo": "^0.5.2",
+    "nearley": "^2.20.1",
+    "ts-tree-structure": "^1.0.2"
+  },
+  "devDependencies": {
+    "gts": "^3.1.1",
+    "typescript": "^4.9.5"
+  }
+}

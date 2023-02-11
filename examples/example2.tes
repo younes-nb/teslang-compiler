@@ -1,0 +1,28 @@
+function find(A: List, n: Number): Number => {
+    let k: Number;
+    let j: Number;
+    for (i, a of A) {
+        if (n == k) {
+            return j;
+        }
+        j = j + 1;
+    }
+
+    return -1;
+}
+
+function main(): List => {
+    let A: Number;
+    let a: Number;
+
+    A = makeList(3);
+    A[0] = 1;
+    A[1] = 2;
+    A[2] = 3;
+
+    log(find(A, a));
+    log(find(A));
+    log(find(a, A));
+
+    return A;
+}
